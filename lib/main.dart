@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zen_app/holdButton.dart';
+import 'package:zen_app/landscape.dart';
+
+import 'background.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +35,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text("Hi")),
       body: Center(
-        child: HoldButton(),
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Background(),
+              Center(
+                child: Container(
+                  height: 1000,
+                  width: 500,
+                  // color: Colors.blue,
+                  child: Align(
+                    alignment: Alignment(0, 0.7),
+                    child: HoldButton(),
+                  ),
+                ),
+              ),
+              Landscape(),
+            ],
+          ),
+        ),
       ),
     );
   }
