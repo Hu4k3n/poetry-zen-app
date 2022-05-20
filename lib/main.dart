@@ -38,19 +38,19 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Stack(
             children: [
-              Background(),
+              // Background(),
               Center(
                 child: Container(
-                  height: 1000,
-                  width: 500,
-                  // color: Colors.blue,
+                  height: 800,
+                  width: double.infinity,
+                  color: Colors.white,
                   child: Align(
                     alignment: Alignment(0, 0.7),
                     child: HoldButton(),
                   ),
                 ),
               ),
-              Landscape(),
+              // Landscape(),
             ],
           ),
         ),
